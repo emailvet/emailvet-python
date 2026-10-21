@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emailvet"
+version = "0.1.0"
+description = "Provider-aware email address canonicalization."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Emailvet"}
+]
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["emailvet*"]
+
+[tool.setuptools.package-data]
+emailvet = ["data/*.json"]
+
+[project.scripts]
+emailvet = "emailvet.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/emailvet/emailvet-python"
+Repository = "https://github.com/emailvet/emailvet-python"
+Issues = "https://github.com/emailvet/emailvet-python/issues"
